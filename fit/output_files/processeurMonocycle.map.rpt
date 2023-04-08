@@ -1,0 +1,935 @@
+Analysis & Synthesis report for processeurMonocycle
+Fri Apr 07 14:22:07 2023
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: processeur:Processeur|unite_de_traitement_avance:UTA|sign_extend:Extender
+ 14. Parameter Settings for User Entity Instance: processeur:Processeur|unite_de_traitement_avance:UTA|Mux2v1:Mux1
+ 15. Parameter Settings for User Entity Instance: processeur:Processeur|unite_de_traitement_avance:UTA|Mux2v1:MUXRb
+ 16. Parameter Settings for User Entity Instance: processeur:Processeur|unite_de_traitement_avance:UTA|Mux2v1:Mux2
+ 17. Parameter Settings for User Entity Instance: processeur:Processeur|unite_de_gestion_des_instructions:UGI|sign_extend:PC_Extend
+ 18. Parameter Settings for User Entity Instance: processeur:Processeur|unite_de_gestion_des_instructions:UGI|Mux2v1:Mux
+ 19. Port Connectivity Checks: "processeur:Processeur"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Apr 07 14:22:07 2023       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; processeurMonocycle                         ;
+; Top-level Entity Name              ; top_level                                   ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 4,334                                       ;
+;     Total combinational functions  ; 2,268                                       ;
+;     Dedicated logic registers      ; 2,327                                       ;
+; Total registers                    ; 2327                                        ;
+; Total pins                         ; 41                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                               ;
++------------------------------------------------------------------+--------------------+---------------------+
+; Option                                                           ; Setting            ; Default Value       ;
++------------------------------------------------------------------+--------------------+---------------------+
+; Device                                                           ; 10M50DCF484C7G     ;                     ;
+; Top-level entity name                                            ; top_level          ; processeurMonocycle ;
+; Family name                                                      ; MAX 10             ; Cyclone V           ;
+; Maximum processors allowed for parallel compilation              ; 1                  ;                     ;
+; Use smart compilation                                            ; Off                ; Off                 ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                  ;
+; Enable compact report table                                      ; Off                ; Off                 ;
+; Restructure Multiplexers                                         ; Auto               ; Auto                ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                 ;
+; Preserve fewer node names                                        ; On                 ; On                  ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable              ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001        ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993           ;
+; State Machine Processing                                         ; Auto               ; Auto                ;
+; Safe State Machine                                               ; Off                ; Off                 ;
+; Extract Verilog State Machines                                   ; On                 ; On                  ;
+; Extract VHDL State Machines                                      ; On                 ; On                  ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                 ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000                ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                 ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                  ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                  ;
+; Parallel Synthesis                                               ; On                 ; On                  ;
+; DSP Block Balancing                                              ; Auto               ; Auto                ;
+; NOT Gate Push-Back                                               ; On                 ; On                  ;
+; Power-Up Don't Care                                              ; On                 ; On                  ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                 ;
+; Remove Duplicate Registers                                       ; On                 ; On                  ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                 ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                 ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                 ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                 ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                 ;
+; Ignore SOFT Buffers                                              ; On                 ; On                  ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                 ;
+; Optimization Technique                                           ; Balanced           ; Balanced            ;
+; Carry Chain Length                                               ; 70                 ; 70                  ;
+; Auto Carry Chains                                                ; On                 ; On                  ;
+; Auto Open-Drain Pins                                             ; On                 ; On                  ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                 ;
+; Auto ROM Replacement                                             ; On                 ; On                  ;
+; Auto RAM Replacement                                             ; On                 ; On                  ;
+; Auto DSP Block Replacement                                       ; On                 ; On                  ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto                ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto                ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                  ;
+; Strict RAM Replacement                                           ; Off                ; Off                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                  ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                 ;
+; Auto RAM Block Balancing                                         ; On                 ; On                  ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                 ;
+; Auto Resource Sharing                                            ; Off                ; Off                 ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                 ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                 ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                 ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                  ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                 ;
+; Timing-Driven Synthesis                                          ; On                 ; On                  ;
+; Report Parameter Settings                                        ; On                 ; On                  ;
+; Report Source Assignments                                        ; On                 ; On                  ;
+; Report Connectivity Checks                                       ; On                 ; On                  ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                 ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                   ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation  ;
+; HDL message level                                                ; Level2             ; Level2              ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                 ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000                ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000                ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                 ;
+; Clock MUX Protection                                             ; On                 ; On                  ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                 ;
+; Block Design Naming                                              ; Auto               ; Auto                ;
+; SDC constraint protection                                        ; Off                ; Off                 ;
+; Synthesis Effort                                                 ; Auto               ; Auto                ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                  ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium              ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto                ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                  ;
++------------------------------------------------------------------+--------------------+---------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                 ;
++----------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path             ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                              ; Library ;
++----------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; ../src/unite_de_traitement_avance.vhd        ; yes             ; User VHDL File  ; C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement_avance.vhd        ;         ;
+; ../src/unite_de_gestion_des_instructions.vhd ; yes             ; User VHDL File  ; C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_gestion_des_instructions.vhd ;         ;
+; ../src/ual.vhd                               ; yes             ; User VHDL File  ; C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/ual.vhd                               ;         ;
+; ../src/top_level.vhd                         ; yes             ; User VHDL File  ; C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd                         ;         ;
+; ../src/sign_extend.vhd                       ; yes             ; User VHDL File  ; C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/sign_extend.vhd                       ;         ;
+; ../src/Sept_Segments.vhd                     ; yes             ; User VHDL File  ; C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/Sept_Segments.vhd                     ;         ;
+; ../src/registrePSR.vhd                       ; yes             ; User VHDL File  ; C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registrePSR.vhd                       ;         ;
+; ../src/registrePC.vhd                        ; yes             ; User VHDL File  ; C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registrePC.vhd                        ;         ;
+; ../src/registreAfficheur.vhd                 ; yes             ; User VHDL File  ; C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registreAfficheur.vhd                 ;         ;
+; ../src/processeur.vhd                        ; yes             ; User VHDL File  ; C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/processeur.vhd                        ;         ;
+; ../src/mux2v1.vhd                            ; yes             ; User VHDL File  ; C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/mux2v1.vhd                            ;         ;
+; ../src/memoire_instruction.vhd               ; yes             ; User VHDL File  ; C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/memoire_instruction.vhd               ;         ;
+; ../src/decod_instruction.vhd                 ; yes             ; User VHDL File  ; C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd                 ;         ;
+; ../src/data_memory.vhd                       ; yes             ; User VHDL File  ; C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/data_memory.vhd                       ;         ;
+; ../src/banc_registre.vhd                     ; yes             ; User VHDL File  ; C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/banc_registre.vhd                     ;         ;
++----------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 4,334          ;
+;                                             ;                ;
+; Total combinational functions               ; 2268           ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 1933           ;
+;     -- 3 input functions                    ; 100            ;
+;     -- <=2 input functions                  ; 235            ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 2226           ;
+;     -- arithmetic mode                      ; 42             ;
+;                                             ;                ;
+; Total registers                             ; 2327           ;
+;     -- Dedicated logic registers            ; 2327           ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 41             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 2327           ;
+; Total fan-out                               ; 17693          ;
+; Average fan-out                             ; 3.78           ;
++---------------------------------------------+----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                     ;
++-----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
+; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                             ; Entity Name                       ; Library Name ;
++-----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
+; |top_level                                    ; 2268 (0)            ; 2327 (0)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 41   ; 0            ; 0          ; |top_level                                                                                      ; top_level                         ; work         ;
+;    |Sept_Segments:SEVEN_SEG1|                 ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|Sept_Segments:SEVEN_SEG1                                                             ; Sept_Segments                     ; work         ;
+;    |Sept_Segments:SEVEN_SEG2|                 ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|Sept_Segments:SEVEN_SEG2                                                             ; Sept_Segments                     ; work         ;
+;    |Sept_Segments:SEVEN_SEG3|                 ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|Sept_Segments:SEVEN_SEG3                                                             ; Sept_Segments                     ; work         ;
+;    |Sept_Segments:SEVEN_SEG4|                 ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|Sept_Segments:SEVEN_SEG4                                                             ; Sept_Segments                     ; work         ;
+;    |processeur:Processeur|                    ; 2212 (0)            ; 2327 (0)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|processeur:Processeur                                                                ; processeur                        ; work         ;
+;       |decod_instruction:Decodeur|            ; 53 (53)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|processeur:Processeur|decod_instruction:Decodeur                                     ; decod_instruction                 ; work         ;
+;       |registrePSR:PSR|                       ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|processeur:Processeur|registrePSR:PSR                                                ; registrePSR                       ; work         ;
+;       |unite_de_gestion_des_instructions:UGI| ; 37 (6)              ; 6 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|processeur:Processeur|unite_de_gestion_des_instructions:UGI                          ; unite_de_gestion_des_instructions ; work         ;
+;          |instruction_memory:instr|           ; 25 (25)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|processeur:Processeur|unite_de_gestion_des_instructions:UGI|instruction_memory:instr ; instruction_memory                ; work         ;
+;          |registrePC:PC|                      ; 6 (6)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC            ; registrePC                        ; work         ;
+;       |unite_de_traitement_avance:UTA|        ; 2119 (0)            ; 2320 (0)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|processeur:Processeur|unite_de_traitement_avance:UTA                                 ; unite_de_traitement_avance        ; work         ;
+;          |Mux2v1:MUXRb|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|processeur:Processeur|unite_de_traitement_avance:UTA|Mux2v1:MUXRb                    ; Mux2v1                            ; work         ;
+;          |Mux2v1:Mux1|                        ; 34 (34)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|processeur:Processeur|unite_de_traitement_avance:UTA|Mux2v1:Mux1                     ; Mux2v1                            ; work         ;
+;          |Mux2v1:Mux2|                        ; 1403 (1403)         ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|processeur:Processeur|unite_de_traitement_avance:UTA|Mux2v1:Mux2                     ; Mux2v1                            ; work         ;
+;          |banc_registre:banc_registre|        ; 334 (334)           ; 256 (256)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre     ; banc_registre                     ; work         ;
+;          |data_memory:DataMemory|             ; 260 (260)           ; 2048 (2048)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory          ; data_memory                       ; work         ;
+;          |registreAfficheur:Aff|              ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|processeur:Processeur|unite_de_traitement_avance:UTA|registreAfficheur:Aff           ; registreAfficheur                 ; work         ;
+;          |ual:UAL|                            ; 85 (85)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_level|processeur:Processeur|unite_de_traitement_avance:UTA|ual:UAL                         ; ual                               ; work         ;
++-----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                        ;
++--------------------------------------------------------------------------+--------------------------------------------------------+------------------------+
+; Latch Name                                                               ; Latch Enable Signal                                    ; Free of Timing Hazards ;
++--------------------------------------------------------------------------+--------------------------------------------------------+------------------------+
+; processeur:Processeur|decod_instruction:Decodeur|RegAff                  ; processeur:Processeur|decod_instruction:Decodeur|Mux10 ; yes                    ;
+; processeur:Processeur|decod_instruction:Decodeur|instr_courante.BLT_291  ; processeur:Processeur|decod_instruction:Decodeur|Mux10 ; yes                    ;
+; processeur:Processeur|decod_instruction:Decodeur|instr_courante.BAL_301  ; processeur:Processeur|decod_instruction:Decodeur|Mux10 ; yes                    ;
+; processeur:Processeur|decod_instruction:Decodeur|ALUctr[1]               ; processeur:Processeur|decod_instruction:Decodeur|Mux10 ; yes                    ;
+; processeur:Processeur|decod_instruction:Decodeur|instr_courante.ADDi_356 ; processeur:Processeur|decod_instruction:Decodeur|Mux10 ; yes                    ;
+; processeur:Processeur|decod_instruction:Decodeur|ALUctr[0]               ; processeur:Processeur|decod_instruction:Decodeur|Mux10 ; yes                    ;
+; processeur:Processeur|decod_instruction:Decodeur|instr_courante.ADDr_345 ; processeur:Processeur|decod_instruction:Decodeur|Mux10 ; yes                    ;
+; processeur:Processeur|decod_instruction:Decodeur|WrRsc                   ; processeur:Processeur|decod_instruction:Decodeur|Mux10 ; yes                    ;
+; Number of user-specified and inferred latches = 8                        ;                                                        ;                        ;
++--------------------------------------------------------------------------+--------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                     ;
++-----------------------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                                 ; Reason for Removal                     ;
++-----------------------------------------------------------------------------------------------+----------------------------------------+
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][3]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][3]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][3]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][3]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][3]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][3]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][3]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][3]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][2]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][2]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][2]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][2]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][2]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][2]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][2]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][2]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][1]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][1]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][1]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][1]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][1]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][1]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][1]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][1]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][0]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][0]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][0]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][0]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][0]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][0]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][0]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][0]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][7]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][7]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][7]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][7]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][7]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][7]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][7]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][7]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][6]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][6]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][6]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][6]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][6]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][6]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][6]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][6]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][5]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][5]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][5]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][5]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][5]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][5]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][5]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][5]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][4]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][4]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][4]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][4]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][4]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][4]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][4]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][4]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][11]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][11]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][11]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][11]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][11]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][11]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][11] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][11] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][10]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][10]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][10]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][10]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][10]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][10]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][10] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][10] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][9]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][9]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][9]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][9]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][9]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][9]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][9]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][9]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][8]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][8]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][8]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][8]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][8]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][8]   ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][8]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][8]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][15]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][15]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][15]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][15]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][15]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][15]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][15] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][15] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][14]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][14]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][14]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][14]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][14]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][14]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][14] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][14] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][13]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][13]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][13]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][13]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][13]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][13]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][13] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][13] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][12]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][12]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][12]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][12]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][12]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][12]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][12] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][12] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][16]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][16]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][16]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][16]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][16]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][16]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][16] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][16] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][17]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][17]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][17]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][17]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][17]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][17]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][17] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][17] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][18]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][18]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][18]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][18]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][18]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][18]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][18] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][18] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][19]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][19]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][19]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][19]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][19]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][19]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][19] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][19] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][20]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][20]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][20]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][20]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][20]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][20]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][20] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][20] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][21]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][21]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][21]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][21]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][21]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][21]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][21] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][21] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][22]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][22]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][22]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][22]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][22]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][22]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][22] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][22] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][23]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][23]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][23]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][23]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][23]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][23]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][23] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][23] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][24]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][24]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][24]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][24]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][24]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][24]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][24] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][24] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][25]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][25]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][25]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][25]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][25]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][25]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][25] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][25] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][26]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][26]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][26]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][26]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][26]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][26]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][26] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][26] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][27]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][27]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][27]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][27]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][27]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][27]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][27] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][27] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][28]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][28]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][28]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][28]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][28]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][28]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][28] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][28] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][29]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][29]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][29]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][29]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][29]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][29]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][29] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][29] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][30]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][30]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][30]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][30]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][30]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][30]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][30] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][30] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[4][31]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[5][31]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[6][31]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[7][31]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[8][31]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[9][31]  ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[10][31] ; Stuck at GND due to stuck port data_in ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[11][31] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 256                                                       ;                                        ;
++-----------------------------------------------------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2327  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 6     ;
+; Number of registers using Asynchronous Clear ; 2327  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2320  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                           ;
++----------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                            ; Fan out ;
++----------------------------------------------------------------------------------------------+---------+
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[15][4] ; 2       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Banc[15][5] ; 2       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[41][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[35][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[33][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[43][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[45][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[39][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[37][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[47][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[19][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[27][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[21][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[29][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[17][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[25][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[23][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[31][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[9][0]       ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[5][0]       ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[1][0]       ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[13][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[11][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[7][0]       ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[3][0]       ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[15][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[57][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[53][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[49][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[61][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[59][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[55][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[51][0]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[50][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[22][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[18][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[54][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[51][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[23][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[19][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[55][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[42][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[11][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[10][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[43][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[46][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[15][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[14][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[47][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[6][1]       ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[38][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[3][1]       ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[35][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[2][1]       ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[34][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[7][1]       ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[39][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[30][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[62][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[27][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[59][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[26][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[58][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[31][1]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[13][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[29][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[14][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[30][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[12][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[28][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[15][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[31][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[52][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[38][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[36][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[54][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[53][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[39][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[37][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[55][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[5][2]       ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[21][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[6][2]       ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[22][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[4][2]       ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[20][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[7][2]       ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[23][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[60][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[45][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[44][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[61][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[62][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[47][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[46][2]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[42][3]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[46][3]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[41][3]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[45][3]      ; 1       ;
+; processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory|Banc[40][3]      ; 1       ;
+; Total number of inverted registers = 190*                                                    ;         ;
++----------------------------------------------------------------------------------------------+---------+
+* Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------+
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |top_level|processeur:Processeur|unite_de_traitement_avance:UTA|ual:UAL|Mux29                     ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |top_level|processeur:Processeur|unite_de_traitement_avance:UTA|Mux2v1:Mux1|S[5]                  ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |top_level|processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Mux30 ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |top_level|processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre|Mux55 ;
+; 65:1               ; 7 bits    ; 301 LEs       ; 301 LEs              ; 0 LEs                  ; No         ; |top_level|processeur:Processeur|unite_de_traitement_avance:UTA|Mux2v1:Mux2|S[31]                 ;
+; 128:1              ; 6 bits    ; 510 LEs       ; 12 LEs               ; 498 LEs                ; No         ; |top_level|processeur:Processeur|decod_instruction:Decodeur|Mux1                                  ;
+; 68:1               ; 25 bits   ; 1125 LEs      ; 1100 LEs             ; 25 LEs                 ; No         ; |top_level|processeur:Processeur|unite_de_traitement_avance:UTA|Mux2v1:Mux2|S[29]                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processeur:Processeur|unite_de_traitement_avance:UTA|sign_extend:Extender ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processeur:Processeur|unite_de_traitement_avance:UTA|Mux2v1:Mux1 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; n              ; 32    ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processeur:Processeur|unite_de_traitement_avance:UTA|Mux2v1:MUXRb ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processeur:Processeur|unite_de_traitement_avance:UTA|Mux2v1:Mux2 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; n              ; 32    ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processeur:Processeur|unite_de_gestion_des_instructions:UGI|sign_extend:PC_Extend ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+; n              ; 24    ; Signed Integer                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processeur:Processeur|unite_de_gestion_des_instructions:UGI|Mux2v1:Mux ;
++----------------+-------+--------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------------+
+; n              ; 32    ; Signed Integer                                                                             ;
++----------------+-------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processeur:Processeur"                                                                           ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; afficheur[31..16] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 41                          ;
+; cycloneiii_ff         ; 2327                        ;
+;     CLR               ; 1                           ;
+;     CLR SLD           ; 6                           ;
+;     ENA CLR           ; 2320                        ;
+; cycloneiii_lcell_comb ; 2272                        ;
+;     arith             ; 42                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 36                          ;
+;     normal            ; 2230                        ;
+;         1 data inputs ; 195                         ;
+;         2 data inputs ; 38                          ;
+;         3 data inputs ; 64                          ;
+;         4 data inputs ; 1933                        ;
+;                       ;                             ;
+; Max LUT depth         ; 16.50                       ;
+; Average LUT depth     ; 9.62                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:07     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Fri Apr 07 14:21:43 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processeurMonocycle -c processeurMonocycle
+Warning (12473): User specified to use only one processors but 4 processors were detected which could be used to decrease run time.
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lucas/onedrive - etu.sorbonne-universite.fr/ei-se/semestre 6/projet vhdl/projet/projet/src/unite_de_traitement_avance.vhd
+    Info (12022): Found design unit 1: unite_de_traitement_avance-struct File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement_avance.vhd Line: 27
+    Info (12023): Found entity 1: unite_de_traitement_avance File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement_avance.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lucas/onedrive - etu.sorbonne-universite.fr/ei-se/semestre 6/projet vhdl/projet/projet/src/unite_de_traitement.vhd
+    Info (12022): Found design unit 1: unite_de_traitement-struct File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement.vhd Line: 20
+    Info (12023): Found entity 1: unite_de_traitement File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lucas/onedrive - etu.sorbonne-universite.fr/ei-se/semestre 6/projet vhdl/projet/projet/src/unite_de_gestion_des_instructions.vhd
+    Info (12022): Found design unit 1: unite_de_gestion_des_instructions-struct File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_gestion_des_instructions.vhd Line: 15
+    Info (12023): Found entity 1: unite_de_gestion_des_instructions File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_gestion_des_instructions.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lucas/onedrive - etu.sorbonne-universite.fr/ei-se/semestre 6/projet vhdl/projet/projet/src/ual.vhd
+    Info (12022): Found design unit 1: ual-RTL File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/ual.vhd Line: 13
+    Info (12023): Found entity 1: ual File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/ual.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lucas/onedrive - etu.sorbonne-universite.fr/ei-se/semestre 6/projet vhdl/projet/projet/src/top_level.vhd
+    Info (12022): Found design unit 1: top_level-RTL File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd Line: 18
+    Info (12023): Found entity 1: top_level File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lucas/onedrive - etu.sorbonne-universite.fr/ei-se/semestre 6/projet vhdl/projet/projet/src/sign_extend.vhd
+    Info (12022): Found design unit 1: sign_extend-behavioral File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/sign_extend.vhd Line: 16
+    Info (12023): Found entity 1: sign_extend File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/sign_extend.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lucas/onedrive - etu.sorbonne-universite.fr/ei-se/semestre 6/projet vhdl/projet/projet/src/sept_segments.vhd
+    Info (12022): Found design unit 1: Sept_Segments-COMB File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/Sept_Segments.vhd Line: 38
+    Info (12023): Found entity 1: Sept_Segments File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/Sept_Segments.vhd Line: 30
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lucas/onedrive - etu.sorbonne-universite.fr/ei-se/semestre 6/projet vhdl/projet/projet/src/registrepsr.vhd
+    Info (12022): Found design unit 1: registrePSR-behavioral File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registrePSR.vhd Line: 13
+    Info (12023): Found entity 1: registrePSR File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registrePSR.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lucas/onedrive - etu.sorbonne-universite.fr/ei-se/semestre 6/projet vhdl/projet/projet/src/registrepc.vhd
+    Info (12022): Found design unit 1: registrePC-behavioral File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registrePC.vhd Line: 13
+    Info (12023): Found entity 1: registrePC File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registrePC.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lucas/onedrive - etu.sorbonne-universite.fr/ei-se/semestre 6/projet vhdl/projet/projet/src/registreafficheur.vhd
+    Info (12022): Found design unit 1: registreAfficheur-behavioral File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registreAfficheur.vhd Line: 13
+    Info (12023): Found entity 1: registreAfficheur File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registreAfficheur.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lucas/onedrive - etu.sorbonne-universite.fr/ei-se/semestre 6/projet vhdl/projet/projet/src/processeur.vhd
+    Info (12022): Found design unit 1: processeur-struct File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/processeur.vhd Line: 14
+    Info (12023): Found entity 1: processeur File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/processeur.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lucas/onedrive - etu.sorbonne-universite.fr/ei-se/semestre 6/projet vhdl/projet/projet/src/mux2v1.vhd
+    Info (12022): Found design unit 1: Mux2v1-behavioral File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/mux2v1.vhd Line: 17
+    Info (12023): Found entity 1: Mux2v1 File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/mux2v1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lucas/onedrive - etu.sorbonne-universite.fr/ei-se/semestre 6/projet vhdl/projet/projet/src/memoire_instruction.vhd
+    Info (12022): Found design unit 1: instruction_memory-RTL File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/memoire_instruction.vhd Line: 12
+    Info (12023): Found entity 1: instruction_memory File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/memoire_instruction.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lucas/onedrive - etu.sorbonne-universite.fr/ei-se/semestre 6/projet vhdl/projet/projet/src/decod_instruction.vhd
+    Info (12022): Found design unit 1: decod_instruction-behavioral File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 18
+    Info (12023): Found entity 1: decod_instruction File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lucas/onedrive - etu.sorbonne-universite.fr/ei-se/semestre 6/projet vhdl/projet/projet/src/data_memory.vhd
+    Info (12022): Found design unit 1: data_memory-behavioral File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/data_memory.vhd Line: 17
+    Info (12023): Found entity 1: data_memory File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/data_memory.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/lucas/onedrive - etu.sorbonne-universite.fr/ei-se/semestre 6/projet vhdl/projet/projet/src/banc_registre.vhd
+    Info (12022): Found design unit 1: banc_registre-RTL File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/banc_registre.vhd Line: 19
+    Info (12023): Found entity 1: banc_registre File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/banc_registre.vhd Line: 5
+Info (12127): Elaborating entity "top_level" for the top level hierarchy
+Info (12129): Elaborating entity "processeur" using architecture "A:struct" for hierarchy "processeur:Processeur" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd Line: 27
+Info (12129): Elaborating entity "unite_de_traitement_avance" using architecture "A:struct" for hierarchy "processeur:Processeur|unite_de_traitement_avance:UTA" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/processeur.vhd Line: 28
+Info (12129): Elaborating entity "banc_registre" using architecture "A:rtl" for hierarchy "processeur:Processeur|unite_de_traitement_avance:UTA|banc_registre:banc_registre" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement_avance.vhd Line: 33
+Info (12129): Elaborating entity "sign_extend" using architecture "A:behavioral" for hierarchy "processeur:Processeur|unite_de_traitement_avance:UTA|sign_extend:Extender" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement_avance.vhd Line: 36
+Info (12129): Elaborating entity "Mux2v1" using architecture "A:behavioral" for hierarchy "processeur:Processeur|unite_de_traitement_avance:UTA|Mux2v1:Mux1" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement_avance.vhd Line: 40
+Info (12129): Elaborating entity "Mux2v1" using architecture "A:behavioral" for hierarchy "processeur:Processeur|unite_de_traitement_avance:UTA|Mux2v1:MUXRb" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement_avance.vhd Line: 44
+Info (12129): Elaborating entity "ual" using architecture "A:rtl" for hierarchy "processeur:Processeur|unite_de_traitement_avance:UTA|ual:UAL" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement_avance.vhd Line: 48
+Info (12129): Elaborating entity "data_memory" using architecture "A:behavioral" for hierarchy "processeur:Processeur|unite_de_traitement_avance:UTA|data_memory:DataMemory" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement_avance.vhd Line: 51
+Info (12129): Elaborating entity "registreAfficheur" using architecture "A:behavioral" for hierarchy "processeur:Processeur|unite_de_traitement_avance:UTA|registreAfficheur:Aff" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement_avance.vhd Line: 58
+Info (12129): Elaborating entity "unite_de_gestion_des_instructions" using architecture "A:struct" for hierarchy "processeur:Processeur|unite_de_gestion_des_instructions:UGI" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/processeur.vhd Line: 31
+Info (12129): Elaborating entity "sign_extend" using architecture "A:behavioral" for hierarchy "processeur:Processeur|unite_de_gestion_des_instructions:UGI|sign_extend:PC_Extend" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_gestion_des_instructions.vhd Line: 22
+Info (12129): Elaborating entity "registrePC" using architecture "A:behavioral" for hierarchy "processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_gestion_des_instructions.vhd Line: 26
+Info (12129): Elaborating entity "instruction_memory" using architecture "A:rtl" for hierarchy "processeur:Processeur|unite_de_gestion_des_instructions:UGI|instruction_memory:instr" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_gestion_des_instructions.vhd Line: 33
+Info (12129): Elaborating entity "decod_instruction" using architecture "A:behavioral" for hierarchy "processeur:Processeur|decod_instruction:Decodeur" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/processeur.vhd Line: 34
+Warning (10631): VHDL Process Statement warning at decod_instruction.vhd(23): inferring latch(es) for signal or variable "instr_courante", which holds its previous value in one or more paths through the process File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at decod_instruction.vhd(87): signal "flags" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 87
+Info (10041): Inferred latch for "instr_courante.BLT" at decod_instruction.vhd(23) File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 23
+Info (10041): Inferred latch for "instr_courante.BAL" at decod_instruction.vhd(23) File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 23
+Info (10041): Inferred latch for "instr_courante.STR" at decod_instruction.vhd(23) File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 23
+Info (10041): Inferred latch for "instr_courante.LDR" at decod_instruction.vhd(23) File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 23
+Info (10041): Inferred latch for "instr_courante.CMP" at decod_instruction.vhd(23) File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 23
+Info (10041): Inferred latch for "instr_courante.ADDr" at decod_instruction.vhd(23) File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 23
+Info (10041): Inferred latch for "instr_courante.ADDi" at decod_instruction.vhd(23) File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 23
+Info (10041): Inferred latch for "instr_courante.MOV" at decod_instruction.vhd(23) File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 23
+Info (12129): Elaborating entity "registrePSR" using architecture "A:behavioral" for hierarchy "processeur:Processeur|registrePSR:PSR" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/processeur.vhd Line: 37
+Info (12129): Elaborating entity "Sept_Segments" using architecture "A:comb" for hierarchy "Sept_Segments:SEVEN_SEG1" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd Line: 30
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276013): RAM logic "processeur:Processeur|unite_de_gestion_des_instructions:UGI|instruction_memory:instr|mem" is uninferred because MIF is not supported for the selected family File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/memoire_instruction.vhd Line: 33
+Warning (13012): Latch processeur:Processeur|decod_instruction:Decodeur|RegAff has unsafe behavior File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processeur:Processeur|decod_instruction:Decodeur|WideNor0 File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 25
+Warning (13012): Latch processeur:Processeur|decod_instruction:Decodeur|instr_courante.BLT_291 has unsafe behavior File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0] File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registrePC.vhd Line: 17
+Warning (13012): Latch processeur:Processeur|decod_instruction:Decodeur|instr_courante.BAL_301 has unsafe behavior File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0] File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registrePC.vhd Line: 17
+Warning (13012): Latch processeur:Processeur|decod_instruction:Decodeur|ALUctr[1] has unsafe behavior File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processeur:Processeur|decod_instruction:Decodeur|WideNor0 File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 25
+Warning (13012): Latch processeur:Processeur|decod_instruction:Decodeur|instr_courante.ADDi_356 has unsafe behavior File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[4] File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registrePC.vhd Line: 17
+Warning (13012): Latch processeur:Processeur|decod_instruction:Decodeur|ALUctr[0] has unsafe behavior File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processeur:Processeur|decod_instruction:Decodeur|WideNor0 File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 25
+Warning (13012): Latch processeur:Processeur|decod_instruction:Decodeur|instr_courante.ADDr_345 has unsafe behavior File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processeur:Processeur|decod_instruction:Decodeur|WideNor0 File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 25
+Warning (13012): Latch processeur:Processeur|decod_instruction:Decodeur|WrRsc has unsafe behavior File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal processeur:Processeur|decod_instruction:Decodeur|WideNor0 File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd Line: 25
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/banc_registre.vhd Line: 41
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Warning (20013): Ignored 24 assignments for entity "DE10_LITE_Golden_Top" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE10_LITE_Golden_Top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE10_LITE_Golden_Top -section_id Top was ignored
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 10 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd Line: 9
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd Line: 10
+Info (21057): Implemented 4439 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 28 output pins
+    Info (21061): Implemented 4398 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 55 warnings
+    Info: Peak virtual memory: 4807 megabytes
+    Info: Processing ended: Fri Apr 07 14:22:08 2023
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:20
+
+

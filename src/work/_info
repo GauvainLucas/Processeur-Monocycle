@@ -1,0 +1,597 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src
+Ebanc_registre
+Z1 w1679847312
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/banc_registre.vhd
+Z6 FC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/banc_registre.vhd
+l0
+L5
+VmH8CChTCjDVn^NZ^cLIk22
+!s100 b9WmAF`1R1P=SE5[GWZ^o1
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1680073683
+!i10b 1
+Z9 !s108 1680073683.000000
+Z10 !s90 -reportprogress|300|-work|work|C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/banc_registre.vhd|
+Z11 !s107 C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/banc_registre.vhd|
+!i113 1
+Z12 o-work work
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+Z14 DEx4 work 13 banc_registre 0 22 mH8CChTCjDVn^NZ^cLIk22
+l36
+L19
+VUBkR;cHPT;BTRZLF_KcZS0
+!s100 iBnC7eX^WgaQ63o`Xzl5k1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ebanc_registre_tb
+Z15 w1679471257
+R2
+R3
+R4
+R0
+Z16 8C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/sim/banc_registre_tb.vhd
+Z17 FC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/sim/banc_registre_tb.vhd
+l0
+L5
+V4Z5J`?Gn>YDN2A0U;7bJT3
+!s100 nOhUH@Y;4J_A4J32PDE2G3
+R7
+32
+Z18 !s110 1679479700
+!i10b 1
+Z19 !s108 1679479700.000000
+Z20 !s90 -reportprogress|300|-work|work|C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/sim/banc_registre_tb.vhd|
+Z21 !s107 C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/sim/banc_registre_tb.vhd|
+!i113 1
+R12
+R13
+Atest
+R14
+R2
+R3
+R4
+DEx4 work 16 banc_registre_tb 0 22 4Z5J`?Gn>YDN2A0U;7bJT3
+l13
+L8
+V^7fGh7ORFEAC>YlSH@@Bm1
+!s100 @fSlg_fKnEZ204cTnEnKb2
+R7
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Edata_memory
+Z22 w1679503162
+R2
+R3
+R4
+R0
+Z23 8C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/data_memory.vhd
+Z24 FC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/data_memory.vhd
+l0
+L5
+Vj[9ZIf8igo2^:YgPKiJFb0
+!s100 YB>BS^MVI?;_42iTS9CE91
+R7
+32
+R8
+!i10b 1
+R9
+Z25 !s90 -reportprogress|300|-work|work|C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/data_memory.vhd|
+Z26 !s107 C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/data_memory.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z27 DEx4 work 11 data_memory 0 22 j[9ZIf8igo2^:YgPKiJFb0
+l20
+L17
+VW?UF6bL[S`@YmK<<o]7ld1
+!s100 ON8?Cka=c<6_D040jRkmE1
+R7
+32
+R8
+!i10b 1
+R9
+R25
+R26
+!i113 1
+R12
+R13
+Edecod_instruction
+Z28 w1680079725
+R2
+R3
+R4
+R0
+Z29 8C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd
+Z30 FC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd
+l0
+L5
+VU<^GQ59:Y=FWZQc8On35`1
+!s100 alN7iVHQjU;Z`j8?EYCgJ2
+R7
+32
+Z31 !s110 1680079740
+!i10b 1
+Z32 !s108 1680079740.000000
+Z33 !s90 -reportprogress|300|-work|work|C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd|
+Z34 !s107 C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/decod_instruction.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+DEx4 work 17 decod_instruction 0 22 U<^GQ59:Y=FWZQc8On35`1
+l21
+L18
+VioBTgQSY>IG<nY=7D`jQi1
+!s100 hj_CFXd:gQ:3fPHXZ@UUX1
+R7
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R12
+R13
+Einstruction_memory
+Z35 w1679843645
+R2
+R3
+R4
+R0
+Z36 8C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/memoire_instruction.vhd
+Z37 FC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/memoire_instruction.vhd
+l0
+L5
+Vg7f0SBY3`z;Be4:AMH=W63
+!s100 4gn>SXS3fVej1E?=]Dj_@2
+R7
+32
+Z38 !s110 1680073684
+!i10b 1
+R9
+Z39 !s90 -reportprogress|300|-work|work|C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/memoire_instruction.vhd|
+Z40 !s107 C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/memoire_instruction.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+Z41 DEx4 work 18 instruction_memory 0 22 g7f0SBY3`z;Be4:AMH=W63
+l35
+L12
+VK]]S0?CT4Zb3DG@OP7I?B0
+!s100 j>bIfePcSeWUmOOX_3d;P3
+R7
+32
+R38
+!i10b 1
+R9
+R39
+R40
+!i113 1
+R12
+R13
+Emux2v1
+Z42 w1679482410
+R2
+R3
+R4
+R0
+Z43 8C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/mux2v1.vhd
+Z44 FC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/mux2v1.vhd
+l0
+L5
+VRlX3h60o>iGNkeNSaMXn?3
+!s100 EzZoFVgMn2:=X30>]1ebI2
+R7
+32
+R38
+!i10b 1
+Z45 !s108 1680073684.000000
+Z46 !s90 -reportprogress|300|-work|work|C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/mux2v1.vhd|
+Z47 !s107 C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/mux2v1.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z48 DEx4 work 6 mux2v1 0 22 RlX3h60o>iGNkeNSaMXn?3
+l18
+L17
+VAV>`TfV7U[hfQC;iF>NG83
+!s100 VdKHEGZoEZ4nB_5`2Xa]B1
+R7
+32
+R38
+!i10b 1
+R45
+R46
+R47
+!i113 1
+R12
+R13
+Eregistrepc
+Z49 w1679496726
+R2
+R3
+R4
+R0
+Z50 8C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registrePC.vhd
+Z51 FC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registrePC.vhd
+l0
+L5
+Vk]U@Na8a]?>@VSNZN;OcM2
+!s100 SGNEhf5MAXz6;C0Ii4hKH0
+R7
+32
+R38
+!i10b 1
+R45
+Z52 !s90 -reportprogress|300|-work|work|C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registrePC.vhd|
+Z53 !s107 C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registrePC.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z54 DEx4 work 10 registrepc 0 22 k]U@Na8a]?>@VSNZN;OcM2
+l14
+L13
+VG_RVjN0z6SF_iQH4c=6_N2
+!s100 H8Y6=cj:4W`7zGB?IFm^U2
+R7
+32
+R38
+!i10b 1
+R45
+R52
+R53
+!i113 1
+R12
+R13
+Eregistrepsr
+Z55 w1680073137
+R2
+R3
+R4
+R0
+Z56 8C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registrePSR.vhd
+Z57 FC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registrePSR.vhd
+l0
+L5
+V:Djb=J`Fd3z_BjfFgm`:a2
+!s100 NP026AL2f[31[`ADgcOMA3
+R7
+32
+Z58 !s110 1680073188
+!i10b 1
+Z59 !s108 1680073188.000000
+Z60 !s90 -reportprogress|300|-work|work|C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registrePSR.vhd|
+Z61 !s107 C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/registrePSR.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+DEx4 work 11 registrepsr 0 22 :Djb=J`Fd3z_BjfFgm`:a2
+l14
+L13
+VHAiaz2b@UMO_gfo34ZX[10
+!s100 PLPkoO;Ybi<ZI[UOdHa6U2
+R7
+32
+R58
+!i10b 1
+R59
+R60
+R61
+!i113 1
+R12
+R13
+Esign_extend
+Z62 w1679477481
+R2
+R3
+R4
+R0
+Z63 8C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/sign_extend.vhd
+Z64 FC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/sign_extend.vhd
+l0
+L5
+VE<7Il@>`1S@e=kbRA>kT]2
+!s100 cYozWIThL^HASm<Zco;Dc0
+R7
+32
+R38
+!i10b 1
+R45
+Z65 !s90 -reportprogress|300|-work|work|C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/sign_extend.vhd|
+Z66 !s107 C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/sign_extend.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z67 DEx4 work 11 sign_extend 0 22 E<7Il@>`1S@e=kbRA>kT]2
+l17
+L16
+VTOK8@FQVMG[SPCb?^_8d43
+!s100 [n>nFejQ1mHzG]N8kbYo43
+R7
+32
+R38
+!i10b 1
+R45
+R65
+R66
+!i113 1
+R12
+R13
+Etb_ual
+Z68 w1679479681
+R2
+R3
+R4
+R0
+Z69 8C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/sim/ual_tb.vhd
+Z70 FC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/sim/ual_tb.vhd
+l0
+L5
+VDCSn?l]XjL^R;BzUjE<A40
+!s100 71:^AHhGdNC>A_j1h`]B80
+R7
+32
+Z71 !s110 1679479697
+!i10b 1
+Z72 !s108 1679479697.000000
+Z73 !s90 -reportprogress|300|-work|work|C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/sim/ual_tb.vhd|
+Z74 !s107 C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/sim/ual_tb.vhd|
+!i113 1
+R12
+R13
+Atest
+Z75 DEx4 work 3 ual 0 22 DW=iNkSLHOUCjn?iXP_:M1
+R2
+R3
+R4
+DEx4 work 6 tb_ual 0 22 DCSn?l]XjL^R;BzUjE<A40
+l14
+L8
+VdO1FTEV30nkMzLzJdmlPT3
+!s100 inANz5KoFlZWV@]gH_^^H2
+R7
+32
+R71
+!i10b 1
+R72
+R73
+R74
+!i113 1
+R12
+R13
+Eual
+Z76 w1680073651
+R2
+R3
+R4
+R0
+Z77 8C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/ual.vhd
+Z78 FC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/ual.vhd
+l0
+L5
+VDW=iNkSLHOUCjn?iXP_:M1
+!s100 O2_A>GRUV8MH5k>RUO^ZC0
+R7
+32
+R38
+!i10b 1
+R45
+Z79 !s90 -reportprogress|300|-work|work|C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/ual.vhd|
+Z80 !s107 C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/ual.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+R75
+l16
+L13
+VkJPK@hOiY>]>khd5L[`:_2
+!s100 3lh27`on;JNlnJb<10fbP1
+R7
+32
+R38
+!i10b 1
+R45
+R79
+R80
+!i113 1
+R12
+R13
+Eunite_de_gestion_des_instructions
+Z81 w1679496379
+R2
+R3
+R4
+R0
+Z82 8C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_gestion_des_instructions.vhd
+Z83 FC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_gestion_des_instructions.vhd
+l0
+L5
+VR[>1^7Cj`nzN34`3nb2>A1
+!s100 P_TI3UPE=DJkMNcc?5a=@2
+R7
+32
+R38
+!i10b 1
+R45
+Z84 !s90 -reportprogress|300|-work|work|C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_gestion_des_instructions.vhd|
+Z85 !s107 C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_gestion_des_instructions.vhd|
+!i113 1
+R12
+R13
+Astruct
+R41
+R48
+R54
+R67
+R2
+R3
+R4
+DEx4 work 33 unite_de_gestion_des_instructions 0 22 R[>1^7Cj`nzN34`3nb2>A1
+l18
+L15
+Vkb:@>F90S^TGN8?kzOFgB3
+!s100 8Yk3TB[S=5cdG2G?_;^m=0
+R7
+32
+R38
+!i10b 1
+R45
+R84
+R85
+!i113 1
+R12
+R13
+Eunite_de_traitement
+Z86 w1679849653
+R2
+R3
+R4
+R0
+Z87 8C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement.vhd
+Z88 FC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement.vhd
+l0
+L5
+VagAe7PQin_e:AHSDWMRW91
+!s100 bKWWZ<_V_^^6@kCE?W1OM1
+R7
+32
+R38
+!i10b 1
+R45
+Z89 !s90 -reportprogress|300|-work|work|C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement.vhd|
+Z90 !s107 C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement.vhd|
+!i113 1
+R12
+R13
+Astruct
+R75
+R14
+R2
+R3
+R4
+DEx4 work 19 unite_de_traitement 0 22 agAe7PQin_e:AHSDWMRW91
+l23
+L20
+VgG=cQdfjKmFMfF?Ned;aN0
+!s100 f0km=QBLJ6]I5_[UJVTMd2
+R7
+32
+R38
+!i10b 1
+R45
+R89
+R90
+!i113 1
+R12
+R13
+Eunite_de_traitement_avance
+Z91 w1680072393
+R2
+R3
+R4
+R0
+Z92 8C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement_avance.vhd
+Z93 FC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement_avance.vhd
+l0
+L5
+VGkoLNMGja]@JCnCj4?6[60
+!s100 GCgWHZjak[=c_c20Xk4H31
+R7
+32
+R38
+!i10b 1
+R45
+Z94 !s90 -reportprogress|300|-work|work|C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement_avance.vhd|
+Z95 !s107 C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/unite_de_traitement_avance.vhd|
+!i113 1
+R12
+R13
+Astruct
+R27
+R75
+R48
+R67
+R14
+R2
+R3
+R4
+DEx4 work 26 unite_de_traitement_avance 0 22 GkoLNMGja]@JCnCj4?6[60
+l27
+L25
+VU9J^AcU6OlTF=anZC_c6P0
+!s100 aT?a[m^6LzXCk=m@T>8Po0
+R7
+32
+R38
+!i10b 1
+R45
+R94
+R95
+!i113 1
+R12
+R13

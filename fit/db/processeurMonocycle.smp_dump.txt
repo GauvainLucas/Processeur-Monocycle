@@ -1,0 +1,11 @@
+
+State Machine - |top_level|processeur:Processeur|decod_instruction:Decodeur|instr_courante
+Name instr_courante.BLT instr_courante.BAL instr_courante.STR instr_courante.LDR instr_courante.CMP instr_courante.ADDr instr_courante.ADDi instr_courante.MOV 
+instr_courante.MOV 0 0 0 0 0 0 0 0 
+instr_courante.ADDi 0 0 0 0 0 0 1 1 
+instr_courante.ADDr 0 0 0 0 0 1 0 1 
+instr_courante.CMP 0 0 0 0 1 0 0 1 
+instr_courante.LDR 0 0 0 1 0 0 0 1 
+instr_courante.STR 0 0 1 0 0 0 0 1 
+instr_courante.BAL 0 1 0 0 0 0 0 1 
+instr_courante.BLT 1 0 0 0 0 0 0 1 

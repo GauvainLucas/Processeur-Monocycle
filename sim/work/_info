@@ -1,0 +1,894 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/sim
+Ebanc_registre
+Z1 w1680701233
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8../src/banc_registre.vhd
+Z6 F../src/banc_registre.vhd
+l0
+L5
+VJSTbF4K>0n2No`0lc88]>1
+!s100 b9WmAF`1R1P=SE5[GWZ^o1
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1680879376
+!i10b 1
+Z9 !s108 1680879376.000000
+Z10 !s90 -reportprogress|300|-93|../src/banc_registre.vhd|
+Z11 !s107 ../src/banc_registre.vhd|
+!i113 1
+o-93
+Z12 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+Z13 DEx4 work 13 banc_registre 0 22 JSTbF4K>0n2No`0lc88]>1
+l36
+L19
+V65^<MJfV@hDm5:_n4oVEY3
+!s100 ed^mO6KNGnP3e:;2W=VB;3
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+o-93
+R12
+Ebanc_registre_tb
+Z14 w1679848496
+R2
+R3
+R4
+R0
+Z15 8C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/sim/banc_registre_tb.vhd
+Z16 FC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/sim/banc_registre_tb.vhd
+l0
+L5
+V4Z5J`?Gn>YDN2A0U;7bJT3
+!s100 nOhUH@Y;4J_A4J32PDE2G3
+R7
+32
+Z17 !s110 1680700913
+!i10b 1
+Z18 !s108 1680700913.000000
+Z19 !s90 -reportprogress|300|-work|work|C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/sim/banc_registre_tb.vhd|
+Z20 !s107 C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/sim/banc_registre_tb.vhd|
+!i113 1
+Z21 o-work work
+R12
+Atest
+R13
+R2
+R3
+R4
+DEx4 work 16 banc_registre_tb 0 22 4Z5J`?Gn>YDN2A0U;7bJT3
+l13
+L8
+V48LnaX8A9LDjROkA7^YC<0
+!s100 dPI:bF?Ran<YEW5:Wd?PX2
+R7
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R21
+R12
+Edata_memory
+Z22 w1680701263
+R2
+R3
+R4
+R0
+Z23 8../src/data_memory.vhd
+Z24 F../src/data_memory.vhd
+l0
+L5
+VAUeS1[iSN3l9mlU2TIF4=2
+!s100 YB>BS^MVI?;_42iTS9CE91
+R7
+31
+R8
+!i10b 1
+R9
+Z25 !s90 -reportprogress|300|-93|../src/data_memory.vhd|
+Z26 !s107 ../src/data_memory.vhd|
+!i113 1
+o-93
+R12
+Abehavioral
+R2
+R3
+R4
+Z27 DEx4 work 11 data_memory 0 22 AUeS1[iSN3l9mlU2TIF4=2
+l34
+L17
+V<;n@SZmHNd<WJf:LjO2VC3
+!s100 deUf^01:aXdkBgabXFUH10
+R7
+31
+R8
+!i10b 1
+R9
+R25
+R26
+!i113 1
+o-93
+R12
+Edecod_instruction
+Z28 w1680863372
+R2
+R3
+R4
+R0
+Z29 8../src/decod_instruction.vhd
+Z30 F../src/decod_instruction.vhd
+l0
+L5
+VNNfaSUMdO3b:;hVl?2Pmh3
+!s100 `IR@gU`O=1T]30C76JZ?E3
+R7
+31
+R8
+!i10b 1
+R9
+Z31 !s90 -reportprogress|300|-93|../src/decod_instruction.vhd|
+Z32 !s107 ../src/decod_instruction.vhd|
+!i113 1
+o-93
+R12
+Abehavioral
+R2
+R3
+R4
+Z33 DEx4 work 17 decod_instruction 0 22 NNfaSUMdO3b:;hVl?2Pmh3
+l21
+L18
+VCQzPHjlYeXT6KiYE:G3=j1
+!s100 7QKYei7G64fbMzWLm8dEH1
+R7
+31
+R8
+!i10b 1
+R9
+R31
+R32
+!i113 1
+o-93
+R12
+Einstruction_memory
+Z34 w1680595641
+R2
+R3
+R4
+R0
+Z35 8../src/memoire_instruction.vhd
+Z36 F../src/memoire_instruction.vhd
+l0
+L5
+VgfHDgM3a43k<N]d_MIhLh2
+!s100 4gn>SXS3fVej1E?=]Dj_@2
+R7
+31
+R8
+!i10b 1
+R9
+Z37 !s90 -reportprogress|300|-93|../src/memoire_instruction.vhd|
+Z38 !s107 ../src/memoire_instruction.vhd|
+!i113 1
+o-93
+R12
+Artl
+R2
+R3
+R4
+Z39 DEx4 work 18 instruction_memory 0 22 gfHDgM3a43k<N]d_MIhLh2
+l35
+L12
+V6f5f@0g0:P4Yk^l1QTIc:1
+!s100 j>bIfePcSeWUmOOX_3d;P3
+R7
+31
+R8
+!i10b 1
+R9
+R37
+R38
+!i113 1
+o-93
+R12
+Emux2v1
+Z40 w1680845929
+R2
+R3
+R4
+R0
+Z41 8../src/mux2v1.vhd
+Z42 F../src/mux2v1.vhd
+l0
+L5
+VL59aV7iM3fh?R?0hK5Z0?1
+!s100 EzZoFVgMn2:=X30>]1ebI2
+R7
+31
+Z43 !s110 1680879377
+!i10b 1
+R9
+Z44 !s90 -reportprogress|300|-93|../src/mux2v1.vhd|
+Z45 !s107 ../src/mux2v1.vhd|
+!i113 1
+o-93
+R12
+Abehavioral
+R2
+R3
+R4
+Z46 DEx4 work 6 mux2v1 0 22 L59aV7iM3fh?R?0hK5Z0?1
+l18
+L17
+V67Ck40<C_7`<IhLeNbkzg1
+!s100 VdKHEGZoEZ4nB_5`2Xa]B1
+R7
+31
+R43
+!i10b 1
+R9
+R44
+R45
+!i113 1
+o-93
+R12
+Eprocesseur
+Z47 w1680845927
+R2
+R3
+R4
+R0
+Z48 8../src/processeur.vhd
+Z49 F../src/processeur.vhd
+l0
+L5
+VJE^4`:;=W@LGi@Bz>:7Bh3
+!s100 6=GH@n8ZnMzeR7idHh0:V0
+R7
+31
+R8
+!i10b 1
+R9
+Z50 !s90 -reportprogress|300|-93|../src/processeur.vhd|
+Z51 !s107 ../src/processeur.vhd|
+!i113 1
+o-93
+R12
+Astruct
+Z52 DEx4 work 11 registrepsr 0 22 0kH7?[;ee9CKL=]74C47V3
+R33
+Z53 DEx4 work 33 unite_de_gestion_des_instructions 0 22 4>W>BF6GjCMTF[FEm2>8z0
+Z54 DEx4 work 26 unite_de_traitement_avance 0 22 P<;<cB5GU^FNBP^FN^4WO1
+R2
+R3
+R4
+Z55 DEx4 work 10 processeur 0 22 JE^4`:;=W@LGi@Bz>:7Bh3
+l22
+L14
+V4C`g;L5SU:B<mJSn_BfEK0
+!s100 H3=c7^VhC?5[jiTUQDId30
+R7
+31
+R8
+!i10b 1
+R9
+R50
+R51
+!i113 1
+o-93
+R12
+Eprocesseur_tb
+Z56 w1680879370
+R2
+R3
+R4
+R0
+Z57 8processeur_tb.vhd
+Z58 Fprocesseur_tb.vhd
+l0
+L5
+V7zJD^FdfP>_LUzX1iHl_c2
+!s100 ;eYlNodX85@zNB?^@AE441
+R7
+31
+R43
+!i10b 1
+Z59 !s108 1680879377.000000
+Z60 !s90 -reportprogress|300|-93|processeur_tb.vhd|
+Z61 !s107 processeur_tb.vhd|
+!i113 1
+o-93
+R12
+Abench
+R55
+R2
+R3
+R4
+Z62 DEx4 work 13 processeur_tb 0 22 7zJD^FdfP>_LUzX1iHl_c2
+l12
+L8
+V`R>]geac_k43WRcz;5A2b0
+!s100 bGTOh;=?MIQ:hgDhzAN;k3
+R7
+31
+R43
+!i10b 1
+R59
+R60
+R61
+!i113 1
+o-93
+R12
+Eregistreafficheur
+Z63 w1680820379
+R2
+R3
+R4
+R0
+Z64 8../src/registreAfficheur.vhd
+Z65 F../src/registreAfficheur.vhd
+l0
+L5
+Vb3=Q;K?4jP:1F?>MFD8d>0
+!s100 SJfc2oFS1efj3J5?D2Xg@3
+R7
+31
+R43
+!i10b 1
+R59
+Z66 !s90 -reportprogress|300|-93|../src/registreAfficheur.vhd|
+Z67 !s107 ../src/registreAfficheur.vhd|
+!i113 1
+o-93
+R12
+Abehavioral
+R2
+R3
+R4
+Z68 DEx4 work 17 registreafficheur 0 22 b3=Q;K?4jP:1F?>MFD8d>0
+l14
+L13
+V1O]:?D;7J06YO4M9ViAMW3
+!s100 VSYmLVjW;2O[S5ihJYKVQ0
+R7
+31
+R43
+!i10b 1
+R59
+R66
+R67
+!i113 1
+o-93
+R12
+Eregistrepc
+Z69 w1679496726
+R2
+R3
+R4
+R0
+Z70 8../src/registrePC.vhd
+Z71 F../src/registrePC.vhd
+l0
+L5
+VLV>bja8zEXSPZ`<gT^5He1
+!s100 SGNEhf5MAXz6;C0Ii4hKH0
+R7
+31
+R43
+!i10b 1
+R59
+Z72 !s90 -reportprogress|300|-93|../src/registrePC.vhd|
+Z73 !s107 ../src/registrePC.vhd|
+!i113 1
+o-93
+R12
+Abehavioral
+R2
+R3
+R4
+Z74 DEx4 work 10 registrepc 0 22 LV>bja8zEXSPZ`<gT^5He1
+l14
+L13
+V1Z?M0__DoZ=jEXXAnF=ZS2
+!s100 H8Y6=cj:4W`7zGB?IFm^U2
+R7
+31
+R43
+!i10b 1
+R59
+R72
+R73
+!i113 1
+o-93
+R12
+Eregistrepsr
+Z75 w1680086203
+R2
+R3
+R4
+R0
+Z76 8../src/registrePSR.vhd
+Z77 F../src/registrePSR.vhd
+l0
+L5
+V0kH7?[;ee9CKL=]74C47V3
+!s100 LH2^d6O9jH[M@Ljck]3R41
+R7
+31
+R43
+!i10b 1
+R59
+Z78 !s90 -reportprogress|300|-93|../src/registrePSR.vhd|
+Z79 !s107 ../src/registrePSR.vhd|
+!i113 1
+o-93
+R12
+Abehavioral
+R2
+R3
+R4
+R52
+l14
+L13
+Vb_ZXiikZf=Z>Jg6fIUcB]2
+!s100 Ikm9QjI@FBkldjf`e4dKH0
+R7
+31
+R43
+!i10b 1
+R59
+R78
+R79
+!i113 1
+o-93
+R12
+Esept_segments
+Z80 w1680707825
+R2
+R3
+R4
+R0
+Z81 8C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/Sept_Segments.vhd
+Z82 FC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/Sept_Segments.vhd
+l0
+L31
+VIZnf8_hWK]iH;dQ6X<9Ul3
+!s100 U@6]51z4zMd7iIGN9WNL10
+R7
+32
+Z83 !s110 1680709874
+!i10b 1
+Z84 !s108 1680709874.000000
+Z85 !s90 -reportprogress|300|-work|work|C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/Sept_Segments.vhd|
+Z86 !s107 C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/Sept_Segments.vhd|
+!i113 1
+R21
+R12
+Acomb
+R2
+R3
+R4
+Z87 DEx4 work 13 sept_segments 0 22 IZnf8_hWK]iH;dQ6X<9Ul3
+l42
+L39
+VCDOA]E;gQY:Hzb<_>LK<Q1
+!s100 b0VUYnK4fl<VBb5`^OG5B3
+R7
+32
+R83
+!i10b 1
+R84
+R85
+R86
+!i113 1
+R21
+R12
+Esign_extend
+Z88 w1679477481
+R2
+R3
+R4
+R0
+Z89 8../src/sign_extend.vhd
+Z90 F../src/sign_extend.vhd
+l0
+L5
+VV`lbblCzS_hYbAIEQmS2C0
+!s100 cYozWIThL^HASm<Zco;Dc0
+R7
+31
+R43
+!i10b 1
+R59
+Z91 !s90 -reportprogress|300|-93|../src/sign_extend.vhd|
+Z92 !s107 ../src/sign_extend.vhd|
+!i113 1
+o-93
+R12
+Abehavioral
+R2
+R3
+R4
+Z93 DEx4 work 11 sign_extend 0 22 V`lbblCzS_hYbAIEQmS2C0
+l17
+L16
+VNIe0]8cf89P63E7EGO?c71
+!s100 [n>nFejQ1mHzG]N8kbYo43
+R7
+31
+R43
+!i10b 1
+R59
+R91
+R92
+!i113 1
+o-93
+R12
+Etb_ual
+Z94 w1679851403
+R2
+R3
+R4
+R0
+Z95 8C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/sim/ual_tb.vhd
+Z96 FC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/sim/ual_tb.vhd
+l0
+L5
+VDCSn?l]XjL^R;BzUjE<A40
+!s100 71:^AHhGdNC>A_j1h`]B80
+R7
+32
+Z97 !s110 1680700914
+!i10b 1
+Z98 !s108 1680700914.000000
+Z99 !s90 -reportprogress|300|-work|work|C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/sim/ual_tb.vhd|
+Z100 !s107 C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/sim/ual_tb.vhd|
+!i113 1
+R21
+R12
+Atest
+Z101 DEx4 work 3 ual 0 22 I>VFTz<0G;dV6Gj@A0EkM1
+R2
+R3
+R4
+DEx4 work 6 tb_ual 0 22 DCSn?l]XjL^R;BzUjE<A40
+l14
+L8
+VQ0?XzDn1[YWIa12_l=L0G3
+!s100 PoKo_<o7Wb3[o2B@e03Q20
+R7
+32
+R97
+!i10b 1
+R98
+R99
+R100
+!i113 1
+R21
+R12
+Etop_level
+Z102 w1680709901
+R2
+R3
+R4
+R0
+Z103 8C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd
+Z104 FC:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd
+l0
+L5
+VRhczmmd^S;]`CaIP>Hl^g0
+!s100 a=jDSJ;d=ZE;]cXVkmAo72
+R7
+32
+Z105 !s110 1680709915
+!i10b 1
+Z106 !s108 1680709915.000000
+Z107 !s90 -reportprogress|300|-work|work|C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd|
+Z108 !s107 C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/src/top_level.vhd|
+!i113 1
+R21
+R12
+Artl
+R87
+R55
+R2
+R3
+R4
+DEx4 work 9 top_level 0 22 Rhczmmd^S;]`CaIP>Hl^g0
+l21
+L18
+VgzH0n_`j]KfPIkY8YeMUk3
+!s100 kSIG<0O7>LB<[I@_YK9^J1
+R7
+32
+R105
+!i10b 1
+R106
+R107
+R108
+!i113 1
+R21
+R12
+Eual
+Z109 w1680073651
+R2
+R3
+R4
+R0
+Z110 8../src/ual.vhd
+Z111 F../src/ual.vhd
+l0
+L5
+VI>VFTz<0G;dV6Gj@A0EkM1
+!s100 O2_A>GRUV8MH5k>RUO^ZC0
+R7
+31
+R43
+!i10b 1
+R59
+Z112 !s90 -reportprogress|300|-93|../src/ual.vhd|
+Z113 !s107 ../src/ual.vhd|
+!i113 1
+o-93
+R12
+Artl
+R2
+R3
+R4
+R101
+l16
+L13
+VE8lT103[1[5k^ioXA>PjO1
+!s100 3lh27`on;JNlnJb<10fbP1
+R7
+31
+R43
+!i10b 1
+R59
+R112
+R113
+!i113 1
+o-93
+R12
+Eunite_de_gestion_des_instructions
+Z114 w1680699334
+R2
+R3
+R4
+R0
+Z115 8../src/unite_de_gestion_des_instructions.vhd
+Z116 F../src/unite_de_gestion_des_instructions.vhd
+l0
+L5
+V4>W>BF6GjCMTF[FEm2>8z0
+!s100 P_TI3UPE=DJkMNcc?5a=@2
+R7
+31
+R43
+!i10b 1
+R59
+Z117 !s90 -reportprogress|300|-93|../src/unite_de_gestion_des_instructions.vhd|
+Z118 !s107 ../src/unite_de_gestion_des_instructions.vhd|
+!i113 1
+o-93
+R12
+Astruct
+R39
+R46
+R74
+R93
+R2
+R3
+R4
+R53
+l18
+L15
+V5OQ<f@KOLMIT4HoO2CHk>0
+!s100 U?do2>Pj`d7:H3DAhP95A0
+R7
+31
+R43
+!i10b 1
+R59
+R117
+R118
+!i113 1
+o-93
+R12
+Eunite_de_traitement
+Z119 w1679849653
+R2
+R3
+R4
+R0
+Z120 8../src/unite_de_traitement.vhd
+Z121 F../src/unite_de_traitement.vhd
+l0
+L5
+V[SdNzWMH5`S^FV[^[Tg?Z0
+!s100 bKWWZ<_V_^^6@kCE?W1OM1
+R7
+31
+Z122 !s110 1680876688
+!i10b 1
+Z123 !s108 1680876688.000000
+Z124 !s90 -reportprogress|300|-93|../src/unite_de_traitement.vhd|
+Z125 !s107 ../src/unite_de_traitement.vhd|
+!i113 1
+o-93
+R12
+Astruct
+R101
+R13
+R2
+R3
+R4
+Z126 DEx4 work 19 unite_de_traitement 0 22 [SdNzWMH5`S^FV[^[Tg?Z0
+l23
+L20
+VzTD?h7LDd=heZJLC8XXzk3
+!s100 f0km=QBLJ6]I5_[UJVTMd2
+R7
+31
+R122
+!i10b 1
+R123
+R124
+R125
+!i113 1
+o-93
+R12
+Eunite_de_traitement_avance
+Z127 w1680700508
+R2
+R3
+R4
+R0
+Z128 8../src/unite_de_traitement_avance.vhd
+Z129 F../src/unite_de_traitement_avance.vhd
+l0
+L5
+VP<;<cB5GU^FNBP^FN^4WO1
+!s100 @>GYcW8OS6A94a?QYolKW1
+R7
+31
+R43
+!i10b 1
+R59
+Z130 !s90 -reportprogress|300|-93|../src/unite_de_traitement_avance.vhd|
+Z131 !s107 ../src/unite_de_traitement_avance.vhd|
+!i113 1
+o-93
+R12
+Astruct
+R68
+R27
+R101
+R46
+R93
+R13
+R2
+R3
+R4
+R54
+l30
+L27
+VML<A9zQ6RVEFMzn@URBm71
+!s100 eH@WBj>4OL:6aOU=c3[Hk3
+R7
+31
+R43
+!i10b 1
+R59
+R130
+R131
+!i113 1
+o-93
+R12
+Eunite_de_traitement_avance_tb
+Z132 w1680877103
+R2
+R3
+R4
+R0
+Z133 8unite_de_traitement_avance_tb.vhd
+Z134 Funite_de_traitement_avance_tb.vhd
+l0
+L5
+Vh[l5[jPd1FUjEn?aDiEPB1
+!s100 0mmL;@8oiIoCdm;IVllSd1
+R7
+31
+Z135 !s110 1680877107
+!i10b 1
+Z136 !s108 1680877107.000000
+Z137 !s90 -reportprogress|300|-93|unite_de_traitement_avance_tb.vhd|
+Z138 !s107 unite_de_traitement_avance_tb.vhd|
+!i113 1
+o-93
+R12
+Abench
+R54
+R2
+R3
+R4
+DEx4 work 29 unite_de_traitement_avance_tb 0 22 h[l5[jPd1FUjEn?aDiEPB1
+l15
+L8
+VdH;j7>EonPSC88jY:nN=_0
+!s100 SG;_lo8Z?SS]W[H5IWNa`0
+R7
+31
+R135
+!i10b 1
+R136
+R137
+R138
+!i113 1
+o-93
+R12
+Eunite_de_traitement_tb
+Z139 w1679989420
+R2
+R3
+R4
+R0
+Z140 8unite_de_traitement_tb.vhd
+Z141 Funite_de_traitement_tb.vhd
+l0
+L5
+V20d6FG]Gh^Z[0@j8cH6_[0
+!s100 n9O1kndC=G0]fL<7SA^:L3
+R7
+31
+Z142 !s110 1680876689
+!i10b 1
+R123
+Z143 !s90 -reportprogress|300|-93|unite_de_traitement_tb.vhd|
+Z144 !s107 unite_de_traitement_tb.vhd|
+!i113 1
+o-93
+R12
+Abench
+R126
+R2
+R3
+R4
+DEx4 work 22 unite_de_traitement_tb 0 22 20d6FG]Gh^Z[0@j8cH6_[0
+l15
+L8
+V<M7<CmjH5kK^]5TWOGYdQ2
+!s100 lzkTblGb3YINV>0=7lZJ`3
+R7
+31
+R142
+!i10b 1
+R123
+R143
+R144
+!i113 1
+o-93
+R12

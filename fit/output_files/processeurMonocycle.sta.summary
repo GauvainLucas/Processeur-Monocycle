@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -17.716
+TNS   : -31957.520
+
+Type  : Slow 1200mV 85C Model Setup 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0]'
+Slack : -6.023
+TNS   : -40.579
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0]'
+Slack : 0.525
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -3267.781
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0]'
+Slack : 0.440
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -16.308
+TNS   : -29322.629
+
+Type  : Slow 1200mV 0C Model Setup 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0]'
+Slack : -5.506
+TNS   : -37.299
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0]'
+Slack : 0.581
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -3267.781
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0]'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -7.444
+TNS   : -12883.238
+
+Type  : Fast 1200mV 0C Model Setup 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0]'
+Slack : -1.952
+TNS   : -12.750
+
+Type  : Fast 1200mV 0C Model Hold 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0]'
+Slack : -0.066
+TNS   : -0.067
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.051
+TNS   : -0.109
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -2407.129
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0]'
+Slack : 0.416
+TNS   : 0.000
+
+------------------------------------------------------------
