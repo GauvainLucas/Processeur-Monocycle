@@ -1,0 +1,30 @@
+Quartus Prime Archive log --	C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/fit/processeurMonocycle_v1.qarlog
+
+Archive:	C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/fit/processeurMonocycle_v1.qar
+Date:		Sat Apr 08 11:50:19 2023
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/fit/processeurMonocycle.qpf
+C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/fit/processeurMonocycle.qsf
+C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/src/Sept_Segments.vhd
+C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/src/banc_registre.vhd
+C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/src/data_memory.vhd
+C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/src/decod_instruction.vhd
+C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/src/memoire_instruction.vhd
+C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/src/mux2v1.vhd
+C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/src/processeur.vhd
+C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/src/registreAfficheur.vhd
+C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/src/registrePC.vhd
+C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/src/registrePSR.vhd
+C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/src/sign_extend.vhd
+C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/src/top_level.vhd
+C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/src/ual.vhd
+C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/src/unite_de_gestion_des_instructions.vhd
+C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/src/unite_de_traitement.vhd
+C:/Users/Lucas/OneDrive - etu.sorbonne-universite.fr/EI-SE/Semestre 6/Projet VHDL/Projet/projet/Processeur-monocycle/src/unite_de_traitement_avance.vhd
+c:/intelfpga_lite/18.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 19 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
