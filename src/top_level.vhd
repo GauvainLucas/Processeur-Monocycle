@@ -16,16 +16,19 @@ ENTITY top_level is
 END entity;
 
 ARCHITECTURE RTL OF top_level IS 
-	signal rst,clk, pol: std_logic;
+	signal rst, clk, pol, irq0, irq1: std_logic;
     signal afficheur : std_logic_vector(31 downto 0);
 BEGIN 
  
 rst <= SW(0);
 clk <= CLOCK_50; 
 pol <= SW(9);
+irq0 <= KEY(0);
+irq1 <= KEY(1);
+
 
 Processeur : entity work.processeur(struct)
-    port map(clk, rst, afficheur);
+    port map(clk, rst, irq0, irq1, afficheur);
 
 SEVEN_SEG1: entity work.Sept_Segments(COMB)
 	port map(afficheur(3 downto 0), pol, HEX0);

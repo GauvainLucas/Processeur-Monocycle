@@ -6,7 +6,7 @@ entity decod_instruction is
 port(
    instruction : in std_logic_vector(31 downto 0);
    flags: in std_logic_vector(31 downto 0);
-   nPCSel, RegWr, ALUSrc, PSREn, MemWr, WrRsc, RegSel, RegAff: out std_logic;
+   nPCSel, RegWr, ALUSrc, PSREn, MemWr, WrRsc, RegSel, RegAff, IRQ_end: out std_logic;
    ALUctr : out std_logic_vector(2 downto 0);
    Imm24 : out std_logic_vector(23 downto 0);
    imm8 : out std_logic_vector(7 downto 0)
@@ -16,7 +16,7 @@ END entity ;
 
 
 ARCHITECTURE behavioral OF decod_instruction IS
-    type enum_instruction is (MOV, ADDi, ADDr, CMP, LDR, STR, BAL, BLT);
+    type enum_instruction is (MOV, ADDi, ADDr, CMP, LDR, STR, BAL, BLT, BX);
     signal instr_courante: enum_instruction;
 BEGIN
 
@@ -35,6 +35,7 @@ BEGIN
         case instruction (31 downto 24) is
             when "11101010" => instr_courante <= BAL;
             when "10111010" => instr_courante <= BLT;
+            when "11101011" => instr_courante <= BX;
             when others => null;
         end case;
         
@@ -53,6 +54,7 @@ BEGIN
                 WrRsc <= '0';
                 RegSel <= '0';
                 RegAff <= '0';
+                IRQ_end <= '0';
                 imm8 <= instruction(7 downto 0);
                 imm24 <= (others => '0');
 
@@ -67,6 +69,7 @@ BEGIN
                 WrRsc <= '0';
                 RegSel <= '0';
                 RegAff <= '0';
+                IRQ_end <= '0';
                 imm8 <= (others => '0');
                 imm24 <= (others => '0');
                 
@@ -80,6 +83,7 @@ BEGIN
                 WrRsc <= '0';
                 RegSel <= '0';
                 RegAff <= '0';
+                IRQ_end <= '0';
                 imm8 <= (others => '0');
                 imm24 <= instruction(23 downto 0);
                 
@@ -94,6 +98,7 @@ BEGIN
                     WrRsc <= '0';
                     RegSel <= '0';
                     RegAff <= '0';
+                    IRQ_end <= '0';
                     imm8 <= (others => '0');
                     imm24 <= instruction(23 downto 0);
                 else
@@ -106,6 +111,7 @@ BEGIN
                     WrRsc <= '0';
                     RegSel <= '0';
                     RegAff <= '0';
+                    IRQ_end <= '0';
                     imm8 <= (others => '0');
                     imm24 <= (others => '0');
                 end if;
@@ -121,6 +127,7 @@ BEGIN
                 WrRsc <= '0';
                 RegSel <= '0';
                 RegAff <= '0';
+                IRQ_end <= '0';
                 imm8 <= instruction(7 downto 0);
                 imm24 <= (others => '0');
                 
@@ -134,6 +141,7 @@ BEGIN
                 WrRsc <= '1';
                 RegSel <= '0';
                 RegAff <= '0';
+                IRQ_end <= '0';
                 imm8 <= (others => '0');
                 imm24 <= (others => '0');
                 
@@ -147,6 +155,7 @@ BEGIN
                 WrRsc <= '0';
                 RegSel <= '0';
                 RegAff <= '0';
+                IRQ_end <= '0';
                 imm8 <= instruction(7 downto 0);
                 imm24 <= (others => '0');
 
@@ -160,6 +169,21 @@ BEGIN
                 WrRsc <= '0';
                 RegSel <= '1';
                 RegAff <= '1';
+                IRQ_end <= '0';
+                imm8 <= (others => '0');
+                imm24 <= (others => '0');
+            
+            when BX =>
+                nPCSel <= '0';
+                RegWr <= '0';
+                ALUSrc <= '0';
+                ALUctr <= "000";
+                PSREn <= '0';
+                MemWr <= '0';
+                WrRsc <= '0';
+                RegSel <= '0';
+                RegAff <= '0';
+                IRQ_end <= '1';
                 imm8 <= (others => '0');
                 imm24 <= (others => '0');
 
@@ -173,6 +197,7 @@ BEGIN
                 WrRsc <= '0';
                 RegSel <= '0';
                 RegAff <= '0';
+                IRQ_end <= '0';
                 imm8 <= (others => '0');
                 imm24 <= (others => '0');
         end case;

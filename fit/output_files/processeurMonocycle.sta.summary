@@ -3,75 +3,75 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
-Slack : -17.716
-TNS   : -31957.520
+Slack : -18.359
+TNS   : -36748.151
 
-Type  : Slow 1200mV 85C Model Setup 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0]'
-Slack : -6.023
-TNS   : -40.579
+Type  : Slow 1200mV 85C Model Setup 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|PC[0]'
+Slack : -8.112
+TNS   : -56.399
 
 Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
-Slack : 0.210
-TNS   : 0.000
+Slack : -0.470
+TNS   : -1.376
 
-Type  : Slow 1200mV 85C Model Hold 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0]'
-Slack : 0.525
+Type  : Slow 1200mV 85C Model Hold 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|PC[0]'
+Slack : 0.741
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -3267.781
+TNS   : -3646.591
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0]'
-Slack : 0.440
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|PC[0]'
+Slack : 0.469
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -16.308
-TNS   : -29322.629
+Slack : -16.964
+TNS   : -33952.773
 
-Type  : Slow 1200mV 0C Model Setup 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0]'
-Slack : -5.506
-TNS   : -37.299
+Type  : Slow 1200mV 0C Model Setup 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|PC[0]'
+Slack : -7.517
+TNS   : -52.816
 
 Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
-Slack : 0.166
-TNS   : 0.000
+Slack : -0.456
+TNS   : -1.333
 
-Type  : Slow 1200mV 0C Model Hold 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0]'
-Slack : 0.581
+Type  : Slow 1200mV 0C Model Hold 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|PC[0]'
+Slack : 0.682
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -3267.781
+TNS   : -3646.591
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0]'
-Slack : 0.434
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|PC[0]'
+Slack : 0.355
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
-Slack : -7.444
-TNS   : -12883.238
+Slack : -7.776
+TNS   : -15363.664
 
-Type  : Fast 1200mV 0C Model Setup 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0]'
-Slack : -1.952
-TNS   : -12.750
-
-Type  : Fast 1200mV 0C Model Hold 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0]'
-Slack : -0.066
-TNS   : -0.067
+Type  : Fast 1200mV 0C Model Setup 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|PC[0]'
+Slack : -3.156
+TNS   : -21.259
 
 Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
-Slack : -0.051
-TNS   : -0.109
+Slack : -0.419
+TNS   : -2.438
+
+Type  : Fast 1200mV 0C Model Hold 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|PC[0]'
+Slack : 0.028
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -3.000
-TNS   : -2407.129
+TNS   : -2683.891
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|registrePC:PC|S[0]'
-Slack : 0.416
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'processeur:Processeur|unite_de_gestion_des_instructions:UGI|PC[0]'
+Slack : 0.317
 TNS   : 0.000
 
 ------------------------------------------------------------
